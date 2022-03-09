@@ -1,1 +1,2 @@
-# JavaScript-Playground-2022
+# JavaScript-Playground-2022 :fire:
+## :fire: 
