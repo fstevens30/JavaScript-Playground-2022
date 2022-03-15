@@ -42,8 +42,9 @@ for(var i=0; i< 10; i++){
 var number = 9
 if (number === 10) {
 console.log("answer = " + number)
-}else {
-    console.log("error")
+}
+else {
+console.log("error")
 }
 
 
