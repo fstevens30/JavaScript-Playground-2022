@@ -72,13 +72,12 @@ return p2 - p1
 }
 
 foo(5, 10)
-
+/*
 var new_value = function sum(x1, x2){
 return x1 + x2
 }
-
 sum(10, 3)
-
+*/
 // (=) vs (===)
 /* 
 Single = sign assigns a value to a variable.
@@ -92,12 +91,65 @@ Expressions produce values, like functions. (if (exapmle1 > example2))
 */
 
 // Statement
-var x
+/*var x
  if (y >= 0) {
     x = y
 } else {
     x = -y
 }
+function statements(x) {
+  if(y >= 0) {
+      return x = y
+  } else {
+      return x = -y
+  }
+}
+*/
+//Expression ES6
+//var x = y >= 0 ? y : -y
 
-//Expression 
-var x = y >= 0 ? y : -y
+var word = "Flynn"
+console.log(word.length)
+
+var obj = {}
+
+obj.foo = 123
+console.log(obj)
+
+console.log(word.toUpperCase())
+
+// Javascript values (primitives vs objects)
+
+var obj1 = {}
+var obj2 = {}
+
+console.log(obj1 === obj1)
+
+var number_one = 123
+var number_two = 123
+
+console.log(number_one === number_two)
+
+// Boolean: true and false
+// Numbers: 1234, 12432.4
+// Strings: 'asdfg', "asdfg"
+// non-values: null and undefined
+
+var str = "stevens"
+console.log(str.length = 2)
+console.log(str.length)
+
+var numbers = [1, 2, 3, 4, 5]
+console.log(numbers[3] = 10)
+console.log(numbers)
+
+
+//Index of arrays start at 0, hence the 3 array prints 4 in this code above.
+
+
+
+
+
+
+
+
