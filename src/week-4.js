@@ -143,8 +143,34 @@ var numbers = [1, 2, 3, 4, 5]
 console.log(numbers[3] = 10)
 console.log(numbers)
 
-
 //Index of arrays start at 0, hence the 3 array prints 4 in this code above.
+//Then adding =10 in the brackets () makes the 4 turn into a 10
+
+
+// Nonvalues
+// var nonvalue
+// console.log(nonvalue)
+
+function nonvalue(x) {
+return x
+}
+
+console.log(nonvalue())
+
+var value = NaN
+console.log(nonvalue.first_name)
+console.log(typeof value)
+
+//How to check if undefined below,
+//if (value === undefined || value === null)
+// refactored looks like...
+//if (!value)
+
+//These are considered false values...
+//false, 0, '', Nan, [], {},
+
+
+
 
 
 
