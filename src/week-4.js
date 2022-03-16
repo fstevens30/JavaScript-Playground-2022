@@ -157,7 +157,7 @@ return x
 
 console.log(nonvalue())
 
-var value = NaN
+var value = []
 console.log(nonvalue.first_name)
 console.log(typeof value)
 
