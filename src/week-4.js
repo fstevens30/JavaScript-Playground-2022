@@ -47,5 +47,57 @@ else {
 console.log("error")
 }
 
+// const and let
+let num = 3
+console.log(num)
 
+num = "Flynn"
+console.log(num)
 
+// JavaScript comments
+
+/**
+Hello world
+class sdv503
+ */
+
+var sdv503 = "javascript"
+
+var x = 3
+
+var fullName = "text"
+
+function foo(p1, p2){
+return p2 - p1
+}
+
+foo(5, 10)
+
+var new_value = function sum(x1, x2){
+return x1 + x2
+}
+
+sum(10, 3)
+
+// (=) vs (===)
+/* 
+Single = sign assigns a value to a variable.
+Triple = sign used when comparing two values.
+*/
+
+// Statements vs expressions
+/*
+Statements do things, like declaring variables. (var example)
+Expressions produce values, like functions. (if (exapmle1 > example2))
+*/
+
+// Statement
+var x
+ if (y >= 0) {
+    x = y
+} else {
+    x = -y
+}
+
+//Expression 
+var x = y >= 0 ? y : -y
