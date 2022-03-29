@@ -25,3 +25,9 @@ console.log(myName);
 //alert("Welcome Traveller!");
 var myAge = 20;
 console.log(myAge);
+
+//This code declares two variables myName and myCourse.
+//Then prints the value of myName in console.
+//Then prints alert in the browser.
+//Then declares myAge variable.
+//Then prints the value of myAge in console.
