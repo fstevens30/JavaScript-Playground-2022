@@ -33,7 +33,7 @@ Then prints alert in the browser.
 Then declares myAge variable.
 Then prints the value of myAge in console.
 */
-/* NOTE- (;) Semicolon always ends the statement. It isn't needed for one line but when there is multiple you need to add them at the end of each line.
+/*NOTE- (;) Semicolon always ends the statement. It isn't needed for one line but when there is multiple you need to add them at the end of each line.
  NOTE- To add JS to an HTML you can put the code in <script></script>
  NOTE- Another option for this is <script src=".src/JS_File_Name.js"></script>
  NOTE- It is reccomended to make seperate HTML and JS files and link them with the above HTML command.
@@ -41,5 +41,17 @@ Then prints the value of myAge in console.
  /* You can write multiple line comments like this
 It won't be rendered out 
 */
+
+//LESSON CHALLENGE
+
+var welcomeMessage = "Welcome to the lesson challenge";
+//This declares a variable of welcomeMessage.
+console.log(welcomeMessage);
+//This prints the variable into the console.
+var myName = "Flynn";
+//This declares a variable of myName.
+console.log(myName);
+//This prints the variable into the console.
+
 
 
