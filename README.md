@@ -6,4 +6,6 @@ Javascript is confusijg but fun and I am enjoying learning it!
 
 I will try to keep this readme updated.
 
+![Goat](https://media.giphy.com/media/3oEjHHMtBYjU3MP5yE/giphy-downsized-large.gif)
+
 Flynn :fire:
