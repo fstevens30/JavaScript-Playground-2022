@@ -110,11 +110,30 @@
 // }
 
 //this is an example of a function scope
-function call() {
-    var msg = "Hello World"
-    console.log(msg)
-}
-console.log(call())
+// function call() {
+//     var msg = "Hello World"
+//     console.log(msg)
+// }
+// console.log(call())
 //console.log(msg) 
 //- this creates an error because msg is not defined out of the funstion.
 
+//Global scope types, local scopes can access global but not the other way around.
+
+// var msg=("Hello World!")
+// function readMsg() {
+//     console.log(msg)
+// }
+// console.log(readMsg())
+
+//Lexical Scope
+//This means that means a variable outside a function can be accesed after the declaration. But not the other way around.
+function outerFunc() {
+    var msg = "Hello World"
+    function innerFunc() {
+        console.log(msg)
+    }
+    console.log(innerFunc())
+} 
+    console.log(outerFunc())
+// The output is Hello World, undefined, undefined
