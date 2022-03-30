@@ -54,4 +54,49 @@ console.log(myName);
 //This prints the variable into the console.
 
 
+//Code Snippet
+var message;
+console.log(message);
+//This prints message as undefined as we have not yet defined what the variable says.
+message = null 
+console.log(message);
+//This prints a message of null as we have defined the value of message as (null).
+var myLight = false;
+console.log(myLight);
+//This prints the variable myLight which is false
+myLight= true;
+if(myLight){
+    console.log(myLight);
+}
+//This
+var score1, score2, score3, score4;
+//Declared 4 variables in one line of code
+var a = "Hello";
+var b = 10;
+var c = false;
+console.log(b);
+/*
+let newName = "Jeff";
+console.log(newName);
+*/
+//There are two types of scope, Local and Global
+//const msg = "Hello World"
+//console.log(msg)
 
+/*if(false) {
+    const msg = "Hello World"
+};
+console.log(msg)
+*/
+//Above is an error because the initial const is a local scope and only lives within the if statement.
+
+if(true) {
+    const msg = "Hello World";
+    console.log(msg);
+}
+//Above is not an error because the console.log is inside the local scope of const.
+
+/*Local scope types
+* Block scope 
+* Function scope
+*/
