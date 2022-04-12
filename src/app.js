@@ -93,7 +93,29 @@
 // console.log(isEven("Three"))
 // //This logs false because it has fice letters.
 
-//Ali example
-const isEven = (string) => string.length % 2 == 0
-console.log(isEven("Four"))
+//Ali example ES6
+// const isEven = (string) => string.length % 2 == 0
+// console.log(isEven("Four"))
+
+//TODO Task 4
+
+//Create a function that takes two arguments, first one is an array and the second is a string.
+//indexArray(["Flynn", "Stevens", "NMIT", "Nelson"],"NMIT") -> 2
+
+//MDN Example
+// const indexArray = ["Flynn", "Stevens", "NMIT", "Nelson"]
+// console.log(indexArray.indexOf("NMIT"));
+
+//Tristans Example
+// Function that finds the index of a string in an array
+// function getIndex (array, string) {
+//     return array.indexOf(string)
+// }
+// console.log(getIndex(["Q", "W", "R"], "W"))
+
+//Ali Example ES6
+// const getIndex = (array, string) => array.findIndex(val => val === string)
+// console.log(getIndex(["Q", "W", "R"], "Q"))
+
+//TODO Task 5
 
