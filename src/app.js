@@ -251,6 +251,7 @@ console.log(personFour)
 console.log(personOne.name)
 console.log(personTwo.age)
 
+//ANCHOR
 //Example relating to assesment
 class Date{
     constructor(day, month, year){
@@ -262,3 +263,18 @@ class Date{
 let dateOne = new Date(30, "January", 2002)
 console.log(dateOne)
 console.log(dateOne.year)
+
+//ANCHOR
+//STUDENT example ES6
+class Student{
+    constructor(name, ID, age){
+        this.name = name;
+        this.ID = ID;
+        this.age = age;
+    }
+
+}
+let studentOne = new Student("Flynn", 42069, 20)
+console.log(studentOne)
+
+
