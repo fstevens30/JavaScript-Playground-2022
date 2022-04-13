@@ -119,3 +119,36 @@
 
 //TODO Task 5
 
+//Create a function which returns the total of all odd numbers
+//up to and including the number passes in as param.
+
+//Example: oddNumbersSum(5) -> 9 [1+3+5]
+//Example: oddNumbersSum(13) -> 49 [1+3+5+7+9+11+13]
+
+// //Ali example
+// function addNumbersSum(num){
+//     let total = 0
+//     for (let i = 1; i <= num; i +=2) {
+//         total += i // total = total + i
+//     }
+//     return total
+// }
+// console.log(addNumbersSum(13)) // -> prints (49)
+
+
+//TODO Task 6
+
+// Create a function that takes an array of strings and numbers and filter out the array so it returns only an array of numbers
+
+function filterOut(arr){
+    return arr.filter(val => Number.isInteger(val))
+}
+
+
+
+//TODO Task 7 
+//ANCHOR USE THIS FOR ASSESMENT
+
+//Create a function that takes a number as an argument, increment the number by 1
+
+function addOne 
