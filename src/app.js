@@ -140,9 +140,9 @@
 
 // Create a function that takes an array of strings and numbers and filter out the array so it returns only an array of numbers
 
-function filterOut(arr){
-    return arr.filter(val => Number.isInteger(val))
-}
+// function filterOut(arr){
+//     return arr.filter(val => Number.isInteger(val))
+// }
 
 
 
@@ -155,3 +155,20 @@ function filterOut(arr){
 //     return num + 1
 // }
 // console.log(addByOne(3)) // This prints 4 (3+1)
+
+//TODO Task 8 
+
+//Create a function that takes a boolean variable and returns it as a string.
+//Example: bolToStr(true) -> "True"
+
+//My attempt... IT WORKS!!!!!!
+
+function bolToStr(bool){
+    return bool.toString()
+}
+console.log(bolToStr(true))
+console.log(bolToStr(false))
+
+//Rileys answer using Stringify
+// const stringify = (bool) => bool?'true':'false'
+// console.log(stringify(false));
