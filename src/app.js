@@ -207,4 +207,58 @@
 // console.log(greaterThan(2,7,[1,2,3,4,5,6,7,8,9,10]))
 
 //TODO Task 10
+//Create a function that calculates the area of a rectangle, if the arguments are 
+//invalid return an error message.
 
+//Example: rectArea(-2, 5) -> error
+
+//My Attempt
+// function rectArea(h, w){
+//     if(h < 0 || w < 0) {
+//         return "Error"
+//     }
+//      return h * w
+
+// }
+// console.log(rectArea(-1, 0)) // this returns error
+
+
+//ANCHOR
+//Class basic example
+/*class ClassName{
+    constructor(param1, param2){
+        this.prop1 = param1;
+        this.prop2 = param2;
+    }
+}
+*/
+//class use example
+class Person{
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+ }
+let personOne = new Person('Flynn', '20')
+let personTwo = new Person('Ali', '120')
+let personThree = new Person('Max', '7')
+let personFour = new Person('Bailey', '13')
+
+console.log(personOne)
+console.log(personTwo)
+console.log(personThree)
+console.log(personFour)
+console.log(personOne.name)
+console.log(personTwo.age)
+
+//Example relating to assesment
+class Date{
+    constructor(day, month, year){
+    this.day = day
+    this.month = month
+    this.year = year
+    }
+}
+let dateOne = new Date(30, "January", 2002)
+console.log(dateOne)
+console.log(dateOne.year)
