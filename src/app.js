@@ -163,12 +163,48 @@
 
 //My attempt... IT WORKS!!!!!!
 
-function bolToStr(bool){
-    return bool.toString()
-}
-console.log(bolToStr(true))
-console.log(bolToStr(false))
+// function bolToStr(bool){
+//     return bool.toString()
+// }
+// console.log(bolToStr(true))  // Returns True
+// console.log(bolToStr(false))  // Returns False
 
 //Rileys answer using Stringify
 // const stringify = (bool) => bool?'true':'false'
-// console.log(stringify(false));
+// console.log(stringify(false));  // Returns False
+
+//TODO Task 9
+
+//Create a function that takes two numbers (num1, num2), and an array and returns an array
+// containing all numbers greater than num1 and Less than num 2.
+
+//Example: greaterAndLess(2, 7)[1, 2, 3, 4, 5, 6, 7, 8, 9, 10,] -> [3, 4, 5, 6,]
+
+//Rileys answer USING ES6
+// const greaterAndLess = (num1, num2, arr) => arr.filter((elem) => elem < num2 && elem > num1);
+// console.log(greaterAndLess(2, 7, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+//Tristans Answer
+// Returns all numbers from an array that are within the range set by two numbers
+// function allInRange (array, min, max) {
+//     var newarray = []
+//     for (let index = 0; index < array.length; index++) {
+//         if (min < array[index] && array[index] < max){
+//             newarray.push(array[index])
+//         }
+//     }
+//     return newarray
+// }
+// console.log(allInRange([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6, 9)) 
+
+
+
+//Ali Refactored ES5 and ES6
+
+// function greaterThan(num1, num2, arr) {
+//     return arr.filter(val => val > num1 && val < num2)
+// }
+// console.log(greaterThan(2,7,[1,2,3,4,5,6,7,8,9,10]))
+
+//TODO Task 10
+
