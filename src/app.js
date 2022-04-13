@@ -60,7 +60,7 @@
 // nameOfMonth(12)
 
 //TODO Task 2
-
+//ANCHOR use for assesment
 //Write a function that given date (MM/DD/YYYY) return the day of the week as a string.
 
 //MDN Example
@@ -151,4 +151,7 @@ function filterOut(arr){
 
 //Create a function that takes a number as an argument, increment the number by 1
 
-function addOne 
+// function addByOne(num){
+//     return num + 1
+// }
+// console.log(addByOne(3)) // This prints 4 (3+1)
