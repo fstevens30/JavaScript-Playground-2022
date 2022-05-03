@@ -52,6 +52,20 @@ console.log(concatArray([1,2,3,4,5], [6,7,8,9]))
 //arrayRules([5,6,7,8,9], "Des") -> [9,8,7,6,5]
 //arrayRules([4,3,2,1], "None") -> [4,3,2,1]
 
-function arrayRules([], string){
-    
+//Alis solution
+function arrayRules(arr, str){
+    switch(str){
+        case 'Asc':
+            return arr.sort((a,b) =>a-b);
+        case 'Des':
+            return arr.sort((a,b)=>b-a);
+        case 'None':
+            return arr;
+    }
 }
+console.log(arrayRules([1,2,3,4], 'Des'))
+console.log(arrayRules([9,8,7,6], 'Asc'))
+
+//ANCHOR Task 4
+//
+
