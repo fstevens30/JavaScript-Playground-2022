@@ -3,22 +3,44 @@
 // Create a function that takes an array and returns both the minumum 
 // and maximum numbers in order 
 
-function findMinMax(arr){ //declared function findMinMax with array as parameter.
-    let array = []
-    let min = arr[0]
-    let max = arr[0]
-    for (let i = 0; i < arr.length; i++) {
-        if(arr[i] < min){
-            min = arr[i]
-        }
-        if(arr[i] > max){
-            max= arr[i]
-        }
-    }
-    array.push(min)
-    array.push(max)
+// function findMinMax(arr){ //declared function findMinMax with array as parameter.
+//     let array = []
+//     let min = arr[0]
+//     let max = arr[0]
+//     for (let i = 0; i < arr.length; i++) {
+//         if(arr[i] < min){
+//             min = arr[i]
+//         }
+//         if(arr[i] > max){
+//             max= arr[i]
+//         }
+//     }
+//     array.push(min)
+//     array.push(max)
 
-    return array
-}
+//     return array
+// }
 
-console.log(findMinMax([1,2,3,4,5]))
+// console.log(findMinMax([1,2,3,4,5]))
+
+//Task 2
+//Create a function that concatentates a number of arrays together
+//Example arraysConcat([1,2,3,4,5], [6,7,8,9]) -> [1,2,3,4,5,6,7,8,9]
+
+
+//My answer not a function but works.
+// const arr1 = [1,2,3,4,5];
+// const arr2 = [6,7,8,9];
+// const arr3 = arr1.concat(arr2);
+
+// console.log(arr3)
+
+//Alis answer
+// function concatArray(...args) { //Declared a function with a spread operator
+//     return [].concat(...args);
+// }
+// console.log(concatArray([1,2,3,4], [6,7,8,9]))
+
+// 2nd solution (INSANE)
+const concatArray = (...args) => args.flat(Infinity)
+console.log(concatArray([1,2,3,4,5], [6,7,8,9]))
