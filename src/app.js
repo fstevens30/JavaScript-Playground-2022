@@ -232,4 +232,118 @@ Remove the property name from the object
 // console.log("age" in user)
 // console.log("address" in user)
 
+//ANCHOR for..in loop
 
+//iterate over all keys of an object. e.g
+// let user = {
+//     name: 'John',
+//     age: 30,
+//     isAdmin: true,
+// };
+// for (let key in user) {
+//     //these are the keys
+//     console.log(key) // -> name, age, isAdmin
+//     //these are the values for the keys
+//     console.log(user[key]) // -> John, 30, true
+// }
+
+//ANCHOR Exersise 2
+
+//NOTE Salaries
+//sum all salaries and store in the variable sum
+//if salaries are empty the sum should be 0
+
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Peter: 130,
+// }
+
+//NOTE Copying objects by reference
+//Example;
+
+// let user = { name: "John"};
+// let admin = user; 
+
+// admin.name = "David";
+// console.log(user.name);
+
+//ANCHOR Comparing objects by reference
+// The equality == and strictly equality --- operators for objects work the exact same
+//e.g Two variables reference the same object they are equal
+// let a = {}
+// let b = a; //copy the reference
+// console.log(a==b) // -> 'true' because they are the same.
+
+// let a = {}
+// let b = {}
+// console.log(a==b) // -> 'false' because they are independent references
+
+// const user = 'John'
+// user = 'Matt' //Assignment to a constant variable
+// console.log(user)
+
+//NOTE this method works
+// const user = {name: "Flynn"}
+// user.name = 'Ali'
+// console.log(user) // -> prints Ali
+
+//NOTE Cloning objects
+//example
+
+// let user = {
+//     name: 'John',
+//     age: 30,
+// }
+// let clone = Object.assign({}, user);
+// clone.name = 'David'
+// console.log(user.name) // -> John
+// console.log(clone.name) // -> David
+
+//NOTE Object methods 
+//Javascript methods are actions that can be performed on objects
+//A method is a property containing a function definition
+
+//NOTE Example:
+
+// let user = {
+//     name: 'John',
+//     age: 30
+// };
+// user.sayHi = function () {
+//     console.log("Hello!");
+// };
+
+// user.sayHi(); // -> Returns hello
+
+//NOTE Shorthand
+
+// let user = {
+//     sayHi: function() {
+//         console.log("Hello");
+//     }
+// };
+
+//You can omit function from this.
+
+// let user = {
+//     sayHi() {
+//         console.log("Hello")
+//     }
+// }
+// user.sayHi()
+
+//ANCHOR this keyword
+//It is common that an object needs to acess the information stored in the object to do its job.
+//Example
+
+// let user = {
+//     name: 'John',
+//     age: 30,
+//     sayHi() {
+//         console.log(this.name); // this == name
+//     }
+// };
+// user.sayHi()
+
+//NOTE 
