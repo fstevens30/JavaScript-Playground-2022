@@ -177,31 +177,31 @@ you will only have to return the students name. You do not need to return their 
 //     {
 //         name: "Matt",
 //         grades: [42, 18, 6]
-//     }
+//     }]))
 
-    //ANCHOR Object notes
+//ANCHOR Object notes
 
-    //Declaring a object is like this...
+//NOTE Declaring a object is like this...
 // let user1 = new Object(); //Object constructor
 // let user2= {};//Object literal syntax
 
-//Literals and properties
+//NOTE Literals and properties
 // let user = {
 //     name: 'John', // by key "name" store value 'John'
 //     age: 30, // by key "age" store value 30
 // };
 
-//Property values are accessed using the dot notation
+//NOTE Property values are accessed using the dot notation
 //Get fields of the object
 // console.log(user.name);
 // console.log(user.age);
 
-//You can also add new propeties to an object also using the dot notation
+//NOTE You can also add new propeties to an object also using the dot notation
 //Add properties to an object
 // user.isAdmin = true;
 // console.log(user.isAdmin)
 
-//You can also delete info uaing delete.
+//NOTE You can also delete info using delete.
 // delete user.age;
 // console.log(user);
 
@@ -214,11 +214,22 @@ change the value of price to 1000
 show the products name and price on screen
 Remove the property name from the object
 */
-let product = {
-    name: 'Laptop',
-    price: 1200
-};
-product.price = 1000;
-console.log(product);
-delete product.name;
-console.log(product);
+
+//NOTE My answer...
+
+// let product = {
+//     name: 'Laptop',
+//     price: 1200
+// };
+// product.price = 1000;
+// console.log(product);
+// delete product.name;
+// console.log(product);
+
+//NOTE use "in" keyword to check if an object has a certain property
+//e.g
+// let user = {name: "John", age: 30};
+// console.log("age" in user)
+// console.log("address" in user)
+
+
