@@ -8,4 +8,6 @@ I will try to keep this readme updated.
 
 ![Goat](https://media.giphy.com/media/U6FgnRQfSfSCQaDWMZ/giphy.gif)
 
-Flynn :fire:
+Visit JavaScript Playground 2022 to see notes and class actvities.
+
+~Flynn :fire:
