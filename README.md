@@ -8,4 +8,6 @@ I will try to keep this readme updated.
 
 ![Goat](https://media.giphy.com/media/U6FgnRQfSfSCQaDWMZ/giphy.gif)
 
-Flynn :fire:
+Change branch corresponding week to see notes and class actvities from said week.
+
+~Flynn :moyai:
