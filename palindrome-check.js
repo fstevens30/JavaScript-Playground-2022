@@ -48,7 +48,7 @@ function removePunctuation(string) {
 }
 console.log(removePunctuation('My name is Flynn, this is a test.'));
 
-//Final Solution
+//My final Solution
 
 function checker(str) {
   var clean = str.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '').toLowerCase().replace(/\s/g, '');
