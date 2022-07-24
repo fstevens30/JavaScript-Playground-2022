@@ -53,7 +53,11 @@ console.log(removePunctuation('My name is Flynn, this is a test.'));
 function checker(str) {
   var clean = str.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '').toLowerCase().replace(/\s/g, '');
   var reversed = clean.split('').reverse().join('');
-  return reversed === clean;
+  if (clean === reversed) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(checker('A man, a plan, a canal. Panama'));
 
