@@ -1,64 +1,33 @@
-// Palindrome Checker
-// Write a function that returns true if a given string is a palindrome, false otherwise.
-// A palindrome is a word that’s the same backwards and forwards.
-// For example, “racecar” is a palindrome.
-
 /*
-function palindromeCheck(str) {
-  var reversed = str.split('').reverse().join('');
-  return reversed === str;
-}   
-console.log(palindromeCheck('racecar'));
+//First step is creating a basic function to clean up the string.
+//We can do this using replace and toLowerCase.
+//Using regex we can remove all non alphanumeric characters from the string.
+
+function exampleStringCleanUp(str) {
+  return str.replace(/[^a-zA-Z]/g, '').toLowerCase(); //This regex will remove all non alphanumeric characters and ignores case. then uses the toLowerCase method to convert the string to lowercase.
+}
+console.log(exampleStringCleanUp("This is a test 1234")) //Returns "thisistest"
+
+//Second step is to create a function to check if the string is a palindrome.
+//We can do this using .split to split the string into an array of characters. 
+//We then use .reverse to reverse the array.
+//Then use .join to join the array back into a string.
+
+//Then the modified string is compaerd to the original string.
+//The function will then return true if the string is identical to one another
+
+function isPalindromeExample(str) {
+  return exampleStringCleanUp(str) === exampleStringCleanUp(str).split('').reverse().join('');
+}
+console.log(isPalindrome(exampleStringCleanUp("This is a test 1234"))); //Returns false
+console.log(isPalindrome(exampleStringCleanUp("Racecar1"))); //Returns true
 */
 
-//split() method 
-//The split() method splits a String object into an array of strings by separating the string into substrings.
+//Refactored
 
-const str = "My name is Flynn, this is a test.";
-const words = str.split(' ');
-console.log(words[3]);
+function isPalindrome(str) {
+  return str.replace(/[^a-zA-Z]/g, '').toLowerCase() === str.replace(/[^a-zA-Z]/g, '').toLowerCase().split('').reverse().join('');
+};
 
-//reverse() method
-//The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
-
-const str2 = [["My"], ["name"], ["is"], ["Flynn"], ["this"], ["is"], ["a"], ["test"]];
-const reversed = str2.reverse();
-console.log(reversed);
-
-//join() method
-//The join() method joins all elements of an array into a string.
-
-const str3 = [["This"], ["is"], ["a"], ["string."]];
-const joined = str3.join(' ');
-console.log(joined);
-
-//remove spaces and format capital letters to lowerscase
-//The replace() method returns a new string with some or all matches of a pattern replaced by a replacement. 
-//The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. 
-
-const str4 = "My name is Flynn, this is a test.";
-const formatted = str4.replace(/\s/g, '').toLowerCase();
-console.log(formatted);
-
-//Using Regex
-var regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
-
-function removePunctuation(string) {
-  return string.replace(regex, '');
-}
-console.log(removePunctuation('My name is Flynn, this is a test.'));
-
-//My final Solution
-
-function checker(str) {
-  var clean = str.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '').toLowerCase().replace(/\s/g, '');
-  var reversed = clean.split('').reverse().join('');
-  if (clean === reversed) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log(checker('A man, a plan, a canal. Panama'));
-
-
+console.log(isPalindrome("racecaR1")); //Returns true
+console.log(isPalindrome("This is a test 1234")); //Returns false
