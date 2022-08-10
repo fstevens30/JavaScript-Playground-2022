@@ -56,6 +56,8 @@ function checkTel(str) {
 console.log(checkTel("Hello World")); //Should return false
 console.log(checkTel("-1 (555) 555 5555")); //Should return true
 */
+
+/*
 function telephoneCheck(str){
     var clean = str.replace(/[^0-9]/g, '');
     if (clean.length === 10) {
@@ -72,19 +74,41 @@ console.log(telephoneCheck("1-2222-111-2222")); //Should return false
 
 console.log(telephoneCheck("1 (555) 555-5555")); //Should return true
 
+*/
+
+/*
 //switch statement to check if the first character is 1.
 function telephoneCheck(str){
+    //Firstly check that the first character is 1.
     switch (str[0]) {
         case "1":
-            var clean = str.replace(/[^0-9]/g, '');
+            var clean = str.replace(/[^0-9()]/g, '');
             if (clean.length === 10 || clean.length === 11) {
                 return true;
+            } else {
+                return false;
             }
             break;
         default:
             return false;
     }
+
 }
+console.log(telephoneCheck("1-2222-111-2222")); //Should return false
+//The above code works OK but could work better to solve the problem.
 
-//Switch case is the best option but need a way to filter out single brackets
+*/
 
+//Using the includes method to check if the first character is 1.
+function includeMethodExample(str) 
+{
+    let clean = str.replace(/[^0-9]/g, '');
+    if (str[0] === "1") {
+        
+    } else if (clean.length === 10)
+    {
+        return true;
+    }
+
+}
+console.log(includeMethodExample("1-(2222)-111-2222")); //Should return false
