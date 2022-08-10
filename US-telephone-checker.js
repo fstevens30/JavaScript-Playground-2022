@@ -85,3 +85,6 @@ function telephoneCheck(str){
             return false;
     }
 }
+
+//Switch case is the best option but need a way to filter out single brackets
+
