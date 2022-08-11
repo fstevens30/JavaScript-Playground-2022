@@ -99,16 +99,95 @@ console.log(telephoneCheck("1-2222-111-2222")); //Should return false
 
 */
 
+/*
+
 //Using the includes method to check if the first character is 1.
-function includeMethodExample(str) 
-{
+function includeMethodExample(str) {
     let clean = str.replace(/[^0-9]/g, '');
-    if (str[0] === "1") {
-        
-    } else if (clean.length === 10)
-    {
+    switch (str) {
+        case str[0] === "1":
+            if (str.includes(")", "(")) {
+                if (clean.length === 10 || clean.length === 11) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else if (str.includes(")") || str.includes("(")) {
+                return false;
+            }
+            break;
+        default:
+            return false;
+
+    }
+}
+
+
+console.log(includeMethodExample("1-(2222)-111-2222")); //Should return false
+
+//Refactoring the above code.
+function telephoneCheck(str) {
+    var clean = str.replace(/[^0-9()]/g, '');
+    if (str.includes("1")) {
+        if (clean.length === 10 || 11 && str.includes("), (")) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+//Using string includes to check how many instances of a character exist in a string.
+
+function stringIncludes(str) {
+    var clean = str.replace(/[^0-9]/g, '');
+    if (str.includes("1")) {
+        if (clean.includes(")", "(")) {
+            if (clean.length === 10 || clean.length === 11) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+console.log(stringIncludes("1-222-111-2222")); //Should return false
+*/
+//Another attempt at the above code.
+//Again this doesnt work properly.
+
+function telephoneCheck(str) {
+    var cleanstr = str.replace(/[^0-9]/g, '');
+    console.log(cleanstr);
+    if (str[0].includes("1")) {
+        if (cleanstr.length === 10 || 11 && str.includes("(", ")")) { //If the clean str is 10 or 11 characters long and the string includes "(" and ")" return true.
+            return true;
+        } else if (cleanstr.length === 10 || 11 && str.includes("(")) { //If the clean str is 10 or 11 characters long and the string includes "(" return false.
+            return false;
+        } else if (cleanstr.length === 10 || 11 && str.includes(")")) { //If the clean str is 10 or 11 characters long and the string includes ")" return false.
+            return false;
+        } else { //If the clean str is not 10 or 11 characters long return false.   
+            return false;
+        }
+    } else if (!str[0].includes("1") && cleanstr.length === 10) { //If the clean str is 10 characters long and the string does not include "1" return true.
         return true;
+    } else {
+        return false;
     }
 
-}
-console.log(includeMethodExample("1-(2222)-111-2222")); //Should return false
+
+};
+
+console.log(telephoneCheck("1-(222)-111-2222")); //Should return false
+
+//Acceptance criteria
+//The number must have 10 digits.
+//If the number has 11 digits and the first digit is 1, it is valid.
+//If the number includes
