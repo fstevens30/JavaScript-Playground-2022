@@ -190,4 +190,15 @@ console.log(telephoneCheck("1-(222)-111-2222")); //Should return false
 //Acceptance criteria
 //The number must have 10 digits.
 //If the number has 11 digits and the first digit is 1, it is valid.
-//If the number includes
+//If the number includes any other digits in addition to 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, (, ), -, and space, it is invalid.
+//If the number has a singular bracket with no matching bracket, it is invalid.
+
+//The number can have the following formats:
+//(555)555-5555
+//(555) 555-5555
+//(555) 555 5555
+//555-555-5555
+//1 555-555-5555
+//1(555)555-5555
+//1 555 555 5555
+//15555555555
