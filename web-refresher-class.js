@@ -9,6 +9,11 @@ function convertToSeconds(minutes) { //creating convertToSeconds function that t
 }
 console.log(convertToSeconds(1));
 
+//Refactoring to ES6
+
+const convertSec = (mins) => mins * 60;
+console.log(convertSec(1));
+
 //ANCHOR Task two
 
 //
