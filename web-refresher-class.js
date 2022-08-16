@@ -33,11 +33,33 @@ console.log(getFirst([1, 2, 3, 4, 5]));
 // Create a function that takes an array of objects (computer items) which will calculate the total price of a built computer and return it as a number.
 
 
-function calculateTotalPrice(array) { //creating calculateTotalPrice function that takes an argument of array
+/* 
+getTotalPrice([
+    {product: "monitor" , quantity: 2 , price: 100},
+    {product: "keyboard" , quantity: 1 , price: 50},
+    {product: "mouse" , quantity: 1 , price: 20},
+    {product: "CPU" , quantity: 1 , price: 200},
+    {product: "motherboard" , quantity: 1 , price: 100},
+    {product: "RAM" , quantity: 4 , price: 40},
+    {product: "HDD" , quantity: 1 , price: 80},
+    {product: "GPU" , quantity: 1 , price: 300},
+    {product: "speaker" , quantity: 1 , price: 150},
+]) 
+*/
+
+const totalPrice = (arr) => { //creating totalPrice function that takes an argument of array
     let total = 0; //creating a variable total and setting it to 0
-    for (let i = 0; i < array.length; i++) { //creating a for loop that will run as long as the length of the array is greater than 0
-        total += array[i].price; //the total variable will be added to the price of the array
+    for (let i = 0; i < arr.length; i++) { //creating a for loop that will run as long as the length of the array is greater than 0
+        total += arr[i].quantity * arr[i].price; //the total variable will be added to the quantity of the array multiplied by the price of the array
     }
     return total; //the function will return the total variable
 }
-console.log(calculateTotalPrice([{ "product": "Dell", "ram": 16, "price": 1200 }]));
+
+console.log(totalPrice([{ product: "monitor", quantity: 2, price: 100 }, ]));
+
+//Refactor using Array.reduce()
+
+const totalPrice2 = (arr) => { //creating totalPrice2 function that takes an argument of array
+    return arr.reduce((total, item) => total + item.quantity * item.price, 0); //the function will return the total variable
+}
+console.log(totalPrice2([{ product: "monitor", quantity: 2, price: 100 }, ]));
