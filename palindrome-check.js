@@ -26,7 +26,7 @@ console.log(isPalindrome(exampleStringCleanUp("Racecar1"))); //Returns true
 //Refactored
 
 function isPalindrome(str) {
-  return str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === str.replace(/[^a-zA-Z]/g, '').toLowerCase().split('').reverse().join('');
+    return str.replace(/[^a-zA-Z]/g, '').toLowerCase() === str.replace(/[^a-zA-Z]/g, '').toLowerCase().split('').reverse().join('');
 };
 
 console.log(isPalindrome("Racecar")); //Returns true
