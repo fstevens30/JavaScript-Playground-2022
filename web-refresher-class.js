@@ -63,3 +63,26 @@ const totalPrice2 = (arr) => { //creating totalPrice2 function that takes an arg
     return arr.reduce((total, item) => total + item.quantity * item.price, 0); //the function will return the total variable
 }
 console.log(totalPrice2([{ product: "monitor", quantity: 2, price: 100 }, ]));
+
+
+//ANCHOR Task 3
+
+//Create a function that takes an array and returns an array with the strings that have digits in them.
+//Example: ["1a", "a", "2b", "b"] -> ["1a", "2b"]
+
+function getStringsWithDigits(array) { //creating getStringsWithDigits function that takes an argument of array
+    let newArray = []; //creating a new array
+    for (let i = 0; i < array.length; i++) { //creating a for loop that will run as long as the length of the array is greater than 0
+        if (array[i].match(/\d/)) { //if the array at the index has a digit in it
+            newArray.push(array[i]); //the new array will be pushed to the array at the index
+        }
+    }
+    return newArray; //the function will return the new array
+}
+console.log(getStringsWithDigits(["1a", "a", "2b", "b"])); //calling the function and passing in an array
+
+//Refactoring to ES6
+
+const getDigits = (arr) => { return arr.filter(item => item.match(/\d/)); }; //creating getDigits function that takes an argument of array
+
+console.log(getDigits(["1a", "a", "2b", "b"]));
