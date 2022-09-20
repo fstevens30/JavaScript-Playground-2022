@@ -70,3 +70,18 @@ console.log(LH44.driverPoints);
 let MV33 = new Driver('Max', 'Verstappen', 33, 2, 2, 2, false);
 console.log(MV33.driverProfile);
 console.log(MV33.driverPoints);
+
+// Declaring Charles Leclerc as a driver
+let CL16 = new Driver('Charles', 'Leclerc', 16, 3, 3, 3, false);
+console.log(CL16.driverProfile);
+console.log(CL16.driverPoints);
+
+// Declaring Lando Norris as a driver
+let LN4 = new Driver('Lando', 'Norris', 4, 4, 4, 4, false);
+console.log(LN4.driverProfile);
+console.log(LN4.driverPoints);
+
+// Declaring Sergio Perez as a driver
+let SP11 = new Driver('Sergio', 'Perez', 11, 5, 5, 5, false);
+console.log(SP11.driverProfile);
+console.log(SP11.driverPoints);
