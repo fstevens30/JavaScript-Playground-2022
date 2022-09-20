@@ -57,31 +57,44 @@ class Driver {
     }
 }
 
+// Create an array of drivers
+const drivers = [
+    new Driver('Lewis', 'Hamilton', 44, 1, 1, 1, true),
+    new Driver('Valtteri', 'Bottas', 77, 2, 2, 2, false),
+    new Driver('Max', 'Verstappen', 33, 3, 3, 3, false),
+    new Driver('Lando', 'Norris', 4, 4, 4, 4, false),
+    new Driver('Charles', 'Leclerc', 16, 5, 5, 5, false),
+    new Driver('Carlos', 'Sainz', 55, 6, 6, 6, false),
+    new Driver('Pierre', 'Gasly', 10, 7, 7, 7, false),
+    new Driver('Sergio', 'Perez', 11, 8, 8, 8, false),
+    new Driver('Esteban', 'Ocon', 31, 9, 9, 9, false),
+    new Driver('Lance', 'Stroll', 18, 10, 10, 10, false),
+    new Driver('Fernando', 'Alonso', 14, 11, 11, 11, false),
+    new Driver('Sebastian', 'Vettel', 5, 12, 12, 12, false),
+    new Driver('Yuki', 'Tsunoda', 22, 13, 13, 13, false),
+    new Driver('Daniel', 'Ricciardo', 3, 14, 14, 14, false),
+    new Driver('George', 'Russell', 63, 15, 15, 15, false),
+    new Driver('Nicholas', 'Latifi', 6, 16, 16, 16, false),
+    new Driver('Mick', 'Schumacher', 47, 17, 17, 17, false),
+    new Driver('Alexander', 'Albon', 23, 18, 18, 18, false),
+    new Driver('Guan Yu', 'Zhou', 99, 19, 19, 19, false),
+    new Driver('Kevin', 'Magnussen', 20, 20, 20, 20, false),
+];
 
-// The following prints the driver profile to the console
-console.log(new Driver('Lewis', 'Hamilton', 44, 1, 1, 1, true));
+// Using the drivers array to return a driver profile and points
 
-// Declaring Lewis Hamilton as a driver
-let LH44 = new Driver('Lewis', 'Hamilton', 44, 1, 1, 1, true);
-console.log(LH44.driverProfile);
-console.log(LH44.driverPoints);
+// Lewis Hamilton
+console.log(drivers[0].driverProfile);
+console.log(drivers[0].driverPoints);
 
-// Declaring Max Verstappen as a driver
-let MV33 = new Driver('Max', 'Verstappen', 33, 2, 2, 2, false);
-console.log(MV33.driverProfile);
-console.log(MV33.driverPoints);
+// Max Verstappen
+console.log(drivers[2].driverProfile);
+console.log(drivers[2].driverPoints);
 
-// Declaring Charles Leclerc as a driver
-let CL16 = new Driver('Charles', 'Leclerc', 16, 3, 3, 3, false);
-console.log(CL16.driverProfile);
-console.log(CL16.driverPoints);
+// George Russell
+console.log(drivers[14].driverProfile);
+console.log(drivers[14].driverPoints);
 
-// Declaring Lando Norris as a driver
-let LN4 = new Driver('Lando', 'Norris', 4, 4, 4, 4, false);
-console.log(LN4.driverProfile);
-console.log(LN4.driverPoints);
-
-// Declaring Sergio Perez as a driver
-let SP11 = new Driver('Sergio', 'Perez', 11, 5, 5, 5, false);
-console.log(SP11.driverProfile);
-console.log(SP11.driverPoints);
+// Kevin Magnussen
+console.log(drivers[19].driverProfile);
+console.log(drivers[19].driverPoints);
