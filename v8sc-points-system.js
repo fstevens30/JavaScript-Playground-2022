@@ -37,4 +37,7 @@ class Driver {
 
 const drivers = [
     new Driver("Shane", "van Gisbergen", "Red Bull Ampol Racing", 97),
+    new Driver("Chaz", "Mostert", "Mobil 1 Optus Racing", 25),
+    new Driver("Cam", "Waters", "Monster Energy Racing", 6),
+    new Driver("Will", "Davison", "Shell V-Power Racing", 17),
 ]
