@@ -41,3 +41,28 @@ const drivers = [
     new Driver("Cam", "Waters", "Monster Energy Racing", 6),
     new Driver("Will", "Davison", "Shell V-Power Racing", 17),
 ]
+
+//Create class for the driver results
+
+class DriverResult {
+    constructor(
+        driver,
+        result,
+    ) {
+        this.driver = driver;
+        this.result = result;
+    }
+}
+
+//Create an array of driver results
+
+const driverResults = [
+    new DriverResult(drivers[0], [1, 1]),
+    new DriverResult(drivers[1], [2, 2]),
+    new DriverResult(drivers[2], [3, 3]),
+    new DriverResult(drivers[3], [4, 4]),
+]
+
+console.log(driverResults[0])
+console.log(driverResults[0].driver.driverFirstName);
+console.log(driverResults[0].result[0]);
