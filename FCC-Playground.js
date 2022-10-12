@@ -1,6 +1,6 @@
 // ANCHOR this file contains random code snippets that I have written while learning javascript on freeCodeCamp.org
 
-unction confirmEnding(str, target) { // function to check if a string ends with a target string takes two arguments string and target
+function confirmEnding(str, target) { // function to check if a string ends with a target string takes two arguments string and target
     return str.substr(-target.length) === target; // returns true if the last characters of the string match the target string
 }
 
