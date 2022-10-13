@@ -14,14 +14,16 @@ console.log(confirmEnding("Bastian", "n"));
 
 // NOTE can be done using the .repeat() method but this task requires a different approach
 
-function repeatStringNumTimes(str, num) {
-    if (num < 0) {
+function repeatStringNumTimes(str, num) { // function takes two arguments string and number
+    if (num < 0) { // if the number is negative return an empty string
         return "";
-    } else {
+    } else { // else return the string repeated num times
         let newStr = "";
-        for (let i = 0; i < num; i++) {
-            newStr += str;
+        for (let i = 0; i < num; i++) { // loop through the string num times
+            newStr += str; // for each iteration add the string to the new string
         }
         return newStr;
     }
 }
+
+console.log(repeatStringNumTimes("abc", 3)); // should return "abcabcabc"
