@@ -31,7 +31,7 @@ console.log(repeatStringNumTimes("abc", 3)); // should return "abcabcabc"
 // Doing this task using the .repeat() method
 
 function repeatStr(str, num) {
-    return num > 0 ? str.repeat(num) : ""; // Rreturn the string repeated num times if num is greater than 0 else return an empty string
+    return num > 0 ? str.repeat(num) : ""; // Return the string repeated num times if num is greater than 0 else return an empty string
 }
 
 console.log(repeatStr("abc", 3));
