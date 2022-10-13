@@ -35,3 +35,17 @@ function repeatStr(str, num) {
 }
 
 console.log(repeatStr("abc", 3));
+
+// NOTE Function that takes two arguments one is a string and the other is a number. The function should truncate the string if it is longer than the given number and add "..." to the end of the string
+
+// E.G truncateString("A-tisket a-tasket A green and yellow basket", 8) should return "A-tisket..."
+
+function truncateString(str, num) {
+    if (str.length > num) { // if the string length is greater than the number
+        return str.slice(0, num) + "..."; // return the string sliced from 0 to the number and add "..." to the end
+    } else {
+        return str; // else return the string
+    }
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
