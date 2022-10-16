@@ -57,10 +57,10 @@ function sumAll(arr) { // function takes an array as an argument
     for (let i = Math.min(...arr); i <= Math.max(...arr); i++) { // loop through the array from the smallest number to the largest number
         sum += i; // add each number to the sum
     }
-    return sum; // return the su
+    return sum; // return the sum
 }
 
-console.log(sumAll([4, 1]));
+console.log(sumAll([4, 1])); // should return 10
 
 // Diff two arrays
 
