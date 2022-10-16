@@ -49,3 +49,15 @@ function truncateString(str, num) {
 }
 
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8)); // should return "A-tisket..."
+
+// Sum all numbers in a range
+
+function sumAll(arr) { // function takes an array as an argument
+    let sum = 0; // variable to store the sum
+    for (let i = Math.min(...arr); i <= Math.max(...arr); i++) { // loop through the array from the smallest number to the largest number
+        sum += i; // add each number to the sum
+    }
+    return sum; // return the su
+}
+
+console.log(sumAll([4, 1]));
