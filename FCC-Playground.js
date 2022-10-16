@@ -61,3 +61,23 @@ function sumAll(arr) { // function takes an array as an argument
 }
 
 console.log(sumAll([4, 1]));
+
+// Diff two arrays
+
+function diffArray(arr1, arr2) { // function takes two arrays as arguments
+    var newArr = []; // variable to store the new array
+    // Same, same; but different.
+    for (let i = 0; i < arr1.length; i++) { // loop through the first array
+        if (arr2.indexOf(arr1[i]) === -1) { // if the second array does not contain the current element of the first array
+            newArr.push(arr1[i]); // push the element to the new array
+        }
+    }
+    for (let i = 0; i < arr2.length; i++) { // loop through the second array
+        if (arr1.indexOf(arr2[i]) === -1) { // if the first array does not contain the current element of the second array
+            newArr.push(arr2[i]); // push the element to the new array
+        }
+    }
+    return newArr; // return the new array
+}
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])); // should return [4]
