@@ -296,3 +296,5 @@ console.log(telCheck("1-(222)-111-2222")); //Should return true
 console.log(telCheck("222)-111-2222")); //Should return false
 
 console.log(telCheck("1 555 555 5555")); //Should return true
+
+// This still doesnt pass all tests.
