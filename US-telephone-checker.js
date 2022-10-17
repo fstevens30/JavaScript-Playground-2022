@@ -209,12 +209,12 @@ console.log(telephoneCheck("1-(222)-111-2222")); //Should return false
 //1 555 555 5555
 //15555555555
 
+/*
+
 function telephoneCheck(str) {
     let clean = str.replace(/[^0-9]/g, ''); // Remove all non numeric characters.
     let cleanArr = clean.split(""); //Split the clean string into an array.
-    console.log(cleanArr); //Log the clean array (for testing purposes).
-
-
+    console.log(cleanArr); //Log the clean array (for testing purposes)
 
 }
 
@@ -234,3 +234,35 @@ function checkBrackets(str) {
 }
 
 console.log(checkBrackets("1-(222-111-2222")); //Should return false
+
+*/
+
+// ANCHOR Attempt at the above code.
+
+function telephoneCheck(str) {
+    let brackets = str.replace(/[^0-9()]/g, ''); // Regex to keep only numbers and brackets for the purpose of checking if there is a bracket with no matching bracket.
+    let clean = str.replace(/[^0-9]/g, ''); // Regex to keep only numbers for the purpose of checking if the number is 10 or 11 digits long.
+
+
+    if (brackets.includes("(") && brackets.includes(")")) { //If the brackets string includes "(" and ")".
+        if (clean.length === 10) { //If the clean string is 10 characters long.
+            return true;
+        } else if (clean.length === 11 && clean[0] === "1") { //If the clean string is 11 characters long and the first character is 1.
+            return true;
+        } else {
+            return false;
+        }
+    } else if (!brackets.includes("(") && !brackets.includes(")")) { //If the brackets string does not include "(" and ")".
+        if (clean.length === 10) { //If the clean string is 10 characters long.
+            return true;
+        } else if (clean.length === 11 && clean[0] === "1") { //If the clean string is 11 characters long and the first character is 1.
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+};
+
+console.log(telephoneCheck("1-222-111-2222")); //Should return true
