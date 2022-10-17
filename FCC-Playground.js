@@ -95,4 +95,8 @@ function findLongestWordLength(str) { // function takes a string as an argument
     return longestWord; // return the length of the longest word
 }
 
-console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog")); // should return 6
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog")); // should return l
+
+// Return largest numbers in each sub array of an array
+// Example 
+// largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]) should return [5, 27, 39, 1001]
