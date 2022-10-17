@@ -100,3 +100,24 @@ console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"
 // Return largest numbers in each sub array of an array
 // Example 
 // largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]) should return [5, 27, 39, 1001]
+
+function largestOfFour(arr) { // function takes an array as an argument
+    let largestNums = []; // variable to store the largest numbers
+    for (let i = 0; i < arr.length; i++) { // loop through the array
+        let largestNum = 0; // variable to store the largest number in the current sub array
+        for (let j = 0; j < arr[i].length; j++) { // loop through the current sub array
+            if (arr[i][j] > largestNum) { // if the current number is greater than the largest number
+                largestNum = arr[i][j]; // set the largest number to the current number
+            }
+        }
+        largestNums.push(largestNum); // push the largest number to the largest numbers array
+    }
+    return largestNums; // return the largest numbers array
+}
+
+console.log(largestOfFour([
+    [4, 5, 1, 3],
+    [13, 27, 18, 26],
+    [32, 35, 37, 39],
+    [1000, 1001, 857, 1]
+])); // should return [5, 27, 39, 1001]
