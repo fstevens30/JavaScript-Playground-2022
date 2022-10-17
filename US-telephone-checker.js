@@ -266,3 +266,9 @@ function telephoneCheck(str) {
 };
 
 console.log(telephoneCheck("1-222-111-2222")); //Should return true
+
+console.log(telephoneCheck("222)-111-2222")); //Should return false
+
+console.log(telephoneCheck("1-(222)-111-2222")); //Should return false
+
+console.log(telephoneCheck("1 555 555 5555")); //Should return false
