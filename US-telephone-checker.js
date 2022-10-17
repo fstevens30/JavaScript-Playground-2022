@@ -163,6 +163,8 @@ console.log(stringIncludes("1-222-111-2222")); //Should return false
 //Another attempt at the above code.
 //Again this doesnt work properly.
 
+/*
+
 function telephoneCheck(str) {
     var cleanstr = str.replace(/[^0-9]/g, '');
     console.log(cleanstr);
@@ -185,7 +187,11 @@ function telephoneCheck(str) {
 
 };
 
+
+
 console.log(telephoneCheck("1-(222)-111-2222")); //Should return false
+
+*/
 
 //Acceptance criteria
 //The number must have 10 digits.
@@ -202,3 +208,11 @@ console.log(telephoneCheck("1-(222)-111-2222")); //Should return false
 //1(555)555-5555
 //1 555 555 5555
 //15555555555
+
+function telephoneCheck(str) {
+    let clean = str.replace(/[^0-9]/g, ''); // Remove all non numeric characters.
+    let cleanArr = clean.split(""); //Split the clean string into an array.
+    console.log(cleanArr); //Log the clean array (for testing purposes).
+
+
+}
