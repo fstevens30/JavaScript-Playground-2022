@@ -272,3 +272,27 @@ console.log(telephoneCheck("222)-111-2222")); //Should return false
 console.log(telephoneCheck("1-(222)-111-2222")); //Should return false
 
 console.log(telephoneCheck("1 555 555 5555")); //Should return false
+
+
+// refactor the if statement into one line.
+
+function telCheck(str) {
+    let brackets = str.replace(/[^0-9()]/g, '');
+    let clean = str.replace(/[^0-9]/g, '');
+
+    if (brackets.includes("(") && brackets.includes(")") || !brackets.includes("(") && !brackets.includes(")")) {
+        if (clean.length === 10 || clean.length === 11 && clean[0] === "1") {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+console.log(telCheck("1-(222)-111-2222")); //Should return true
+
+console.log(telCheck("222)-111-2222")); //Should return false
+
+console.log(telCheck("1 555 555 5555")); //Should return true
