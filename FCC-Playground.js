@@ -153,3 +153,19 @@ console.log(largestOfFour([
     [4, -10, 18, 21],
     [-72, -3, -17, -10]
 ])); // should return [25, 48, 21, -3]
+
+//Where do I belong, return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted
+
+//Example getIndexToIns([10, 20, 30, 40, 50], 35) should return 3
+
+function getIndexToIns(arr, num) { // function takes an array and a number as arguments
+    arr.sort((a, b) => a - b); // sort the array from smallest to largest
+    for (let i = 0; i < arr.length; i++) { // loop through the array
+        if (arr[i] >= num) { // if the current number is greater than or equal to the number
+            return i; // return the index of the current number
+        }
+    }
+    return arr.length; // if the number is greater than all the numbers in the array return the length of the array
+}
+
+console.log(getIndexToIns([10, 20, 30, 40, 50], 35)); // should return 3
