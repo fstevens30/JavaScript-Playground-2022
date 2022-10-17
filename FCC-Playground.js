@@ -81,3 +81,18 @@ function diffArray(arr1, arr2) { // function takes two arrays as arguments
 }
 
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])); // should return [4]
+
+// Find the longest word in a string
+
+function findLongestWordLength(str) { // function takes a string as an argument
+    let words = str.split(" "); // split the string into an array of words
+    let longestWord = 0; // variable to store the length of the longest word
+    for (let i = 0; i < words.length; i++) { // loop through the array of words
+        if (words[i].length > longestWord) { // if the current word is longer than the longest word
+            longestWord = words[i].length; // set the longest word to the current word
+        }
+    }
+    return longestWord; // return the length of the longest word
+}
+
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog")); // should return 6
