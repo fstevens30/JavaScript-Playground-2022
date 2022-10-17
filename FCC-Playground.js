@@ -132,19 +132,19 @@ console.log(largestOfFour([
 
 // Refarctoring the above function
 
-function largestOfFour(arr) {
-    const results = [];
-    for (let i = 0; i < arr.length; i++) {
-        let largestNumber = arr[i][0];
-        for (let j = 1; j < arr[i].length; j++) {
-            if (arr[i][j] > largestNumber) {
-                largestNumber = arr[i][j];
+function largestOfFour(arr) { // function takes an array as an argument
+    const results = []; // variable to store the largest numbers
+    for (let i = 0; i < arr.length; i++) { // loop through the array
+        let largestNumber = arr[i][0]; // variable to store the largest number in the current sub array
+        for (let j = 1; j < arr[i].length; j++) { // loop through the current sub array
+            if (arr[i][j] > largestNumber) { // if the current number is greater than the largest number
+                largestNumber = arr[i][j]; // set the largest number to the current number
             }
         }
-        results[i] = largestNumber;
+        results[i] = largestNumber; // push the largest number to the largest numbers array
     }
 
-    return results;
+    return results; // return the largest numbers array
 }
 
 console.log(largestOfFour([
