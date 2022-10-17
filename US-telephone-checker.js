@@ -215,4 +215,22 @@ function telephoneCheck(str) {
     console.log(cleanArr); //Log the clean array (for testing purposes).
 
 
+
 }
+
+telephoneCheck("1-(222)-111-2222"); //Should return false
+
+//function that checks if there is a bracket with no matching bracket.
+
+function checkBrackets(str) {
+    let clean = str.replace(/[^0-9()]/g, '');
+    let cleanArr = clean.split("");
+    console.log(cleanArr);
+    if (cleanArr.includes("(") && cleanArr.includes(")")) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(checkBrackets("1-(222-111-2222")); //Should return false
