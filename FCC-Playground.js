@@ -207,3 +207,15 @@ console.log(word2.match(onlyFour)); // Should return Timmmmber
 let word3 = "Hazzzzah";
 let twoToFive = /Haz{2,5}ah/gi // matches the word Haz with 2 to 5 z's
 console.log(word3.match(twoToFive)); // should return Hazzzzah
+
+// All or none 
+
+//Uses the ? character to check for zero or one of the preceding element
+
+let allOrNone = "colour"
+let regex = /colou?r/gi // matches the word colour or color
+console.log(allOrNone.match(regex)); // should return colour
+
+let favWord = "favorite";
+let favRegex = /favou?rite/gi // matches the word favorite or favourite
+console.log(favWord.match(favRegex)); // should return favorite
