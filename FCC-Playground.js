@@ -203,3 +203,7 @@ console.log(word.match(threePlus)); // should return Helooooooo
 let word2 = "Timmmmber";
 var onlyFour = /Tim{4}ber/gi // matches the word Tim with 4 o's
 console.log(word2.match(onlyFour)); // Should return Timmmmber
+
+let word3 = "Hazzzzah";
+let twoToFive = /Haz{2,5}ah/gi // matches the word Haz with 2 to 5 z's
+console.log(word3.match(twoToFive)); // should return Hazzzzah
