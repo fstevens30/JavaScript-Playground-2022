@@ -183,3 +183,13 @@ function factorialize(num) { // function takes a number as an argument
 console.log(factorialize(5)); // should return 120
 
 console.log(factorialize(10)); // should return 3628800
+
+// Restrict possible usernames
+
+function checkUsername(username) { // function takes a username as an argument
+    let userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i; // regular expression to check if the username is valid
+    let result = userCheck.test(username); // test the username against the regular expression
+    return result; // return the result
+}
+
+console.log(checkUsername("JackOfAllTrades")); // should return true
