@@ -221,7 +221,7 @@ let favRegex = /favou?rite/gi // matches the word favorite or favourite
 console.log(favWord.match(favRegex)); // should return favorite
 
 
-// Nested array 5 levels deep example
+// Nested array depth example
 
 let nestedArray = [ // top, or first level - the outer most array
     ['deep'], // an array within an array, 2 levels of depth
