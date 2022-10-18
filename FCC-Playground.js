@@ -199,3 +199,7 @@ console.log(checkUsername("JackOfAllTrades")); // should return true
 let word = "Helooooooo";
 var threePlus = /Helo{3,}/gi // matches the word Helo with 3 or more o's
 console.log(word.match(threePlus)); // should return Helooooooo
+
+let word2 = "Timmmmber";
+var onlyFour = /Tim{4}ber/gi // matches the word Tim with 4 o's
+console.log(word2.match(onlyFour)); // Should return Timmmmber
