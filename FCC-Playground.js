@@ -173,11 +173,11 @@ console.log(getIndexToIns([10, 20, 30, 40, 50], 35)); // should return 3
 //Factorialize a number
 
 function factorialize(num) { // function takes a number as an argument
-    let factorial = 1; // variable to store the factorial
+    let fact = 1; // variable to store the factorial
     for (let i = 1; i <= num; i++) { // loop through the numbers from 1 to the number
-        factorial *= i; // multiply the factorial by the current number
+        fact *= i; // multiply the factorial by the current number
     }
-    return factorial; // return the factorial
+    return fact; // return the factorial
 }
 
 console.log(factorialize(5)); // should return 120
