@@ -219,3 +219,27 @@ console.log(allOrNone.match(regex)); // should return colour
 let favWord = "favorite";
 let favRegex = /favou?rite/gi // matches the word favorite or favourite
 console.log(favWord.match(favRegex)); // should return favorite
+
+
+// Nested array 5 levels deep example
+
+let nestedArray = [ // top, or first level - the outer most array
+    ['deep'], // an array within an array, 2 levels of depth
+    [
+        ['deeper'],
+        ['deeper'] // 2 arrays nested 3 levels deep
+    ],
+    [
+        [ // an array nested 3 levels deep
+            ['deepest'],
+            ['deepest'] // 2 arrays nested 4 levels deep
+        ],
+        [
+            [
+                ['deepest-est?'] // an array nested 4 levels deep
+            ]
+        ]
+    ]
+];
+
+console.log(nestedArray[2][1][0][0][0]); // should return deepest-est?
