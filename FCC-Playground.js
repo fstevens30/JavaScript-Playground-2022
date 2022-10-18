@@ -193,3 +193,9 @@ function checkUsername(username) { // function takes a username as an argument
 }
 
 console.log(checkUsername("JackOfAllTrades")); // should return true
+
+// Regex examples specific matches 
+
+let word = "Helooooooo";
+var threePlus = /Helo{3,}/gi // matches the word Helo with 3 or more o's
+console.log(word.match(threePlus)); // should return Helooooooo
