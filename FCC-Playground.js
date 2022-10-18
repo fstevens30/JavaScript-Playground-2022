@@ -247,15 +247,18 @@ console.log(nestedArray[2][1][0][0][0]); // should return deepest-est?
 let myNestedArray = [ // top, or first level - the outer most array
     ['unshift', false, 1, 2, 3, 'complex', 'nested'], // an array within an array, 2 levels of depth
     [
-        ['loop', 'shift', 6, 7, 1000, 'method'], // an array within an array, 3 levels of depth
+        ['loop', 'shift', 6, 7, 1000, 'deep'], // an array within an array, 3 levels of depth
         [
-            ['concat', false, true, 'spread', 'array'], // an array within an array, 4 levels of depth
+            ['concat', false, true, 'spread', 'deeper'], // an array within an array, 4 levels of depth
             [
                 ['mutate', 1327.98, 'splice', 'slice', 'push'], // Two arrays within an array, 5 levels of depth
 
-                ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+                ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'deepest']
 
             ]
         ]
     ]
 ];
+
+console.log(myNestedArray[1][1][1][0][0]); // should return mutate
+console.log(myNestedArray[1][1][1][1][0]); // should return iterate
