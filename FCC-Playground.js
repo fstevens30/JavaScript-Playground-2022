@@ -264,9 +264,15 @@ console.log(myNestedArray[1][1][1][0][0]); // should return mutate
 console.log(myNestedArray[1][1][1][1][0]); // should return iterate
 
 // Password checker regex
+// Password requirements:
+// At least five characters long
+// contains at least two consecutive numbers
+// contains at least three letters
 
-let password = "abc123";
-let checkPass = /(?=\w{5,})(?=\D*\d{2,})/; // checks for a password with at least 5 characters and at least 2 numbers
-let result = checkPass.test(password); // test the password against the regular expression
+function passwordCheck(password) { // function takes a password as an argument
+    let passwordRegex = /^(?=.*[0-9]{2,})(?=.*[a-z]{3,}).{5,}$/gi; // regular expression to check if the password is valid
+    let result = passwordRegex.test(password); // test the password against the regular expression
+    return result; // return the result
+}
 
-console.log(result); // should return true
+console.log(passwordCheck("abc123")); // should return true
