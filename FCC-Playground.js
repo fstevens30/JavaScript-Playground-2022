@@ -276,3 +276,5 @@ function passwordCheck(password) { // function takes a password as an argument
 }
 
 console.log(passwordCheck("abc123")); // should return true
+console.log(passwordCheck("abc")); // should return false
+console.log(passwordCheck("12456")); // should return false
