@@ -288,3 +288,17 @@ function groupChar(str) {
 }
 
 console.log(groupChar("Eleanor Roosevelt")); // should return true
+
+//Formatted for FCC 
+
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin|Eleanor).*Roosevelt/; // Change this line
+let result = myRegex.test(myString); // Change this line
+
+// Reusing patterns using capture groups
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let pattern = reRegex.test(repeatNum); // Change this line
+
+console.log(pattern); // should return true
