@@ -278,3 +278,13 @@ function passwordCheck(password) { // function takes a password as an argument
 console.log(passwordCheck("abc123")); // should return true
 console.log(passwordCheck("abc")); // should return false
 console.log(passwordCheck("12456")); // should return false
+
+//Check for mixed grouping of characters
+
+function groupChar(str) {
+    let regex = /(Franklin|Eleanor).*Roosevelt/;
+    let result = regex.test(str); // test the string against the regular expression
+    return result; // return the result
+}
+
+console.log(groupChar("Eleanor Roosevelt")); // should return true
