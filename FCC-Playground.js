@@ -262,3 +262,11 @@ let myNestedArray = [ // top, or first level - the outer most array
 
 console.log(myNestedArray[1][1][1][0][0]); // should return mutate
 console.log(myNestedArray[1][1][1][1][0]); // should return iterate
+
+// Password checker regex
+
+let password = "abc123";
+let checkPass = /(?=\w{5,})(?=\D*\d{2,})/; // checks for a password with at least 5 characters and at least 2 numbers
+let result = checkPass.test(password); // test the password against the regular expression
+
+console.log(result); // should return true
