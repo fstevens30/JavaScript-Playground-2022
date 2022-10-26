@@ -1,9 +1,24 @@
-<!-- Progress Bar -->
+<!DOCTYPE html>
+<html lang="en">
 
-<label>Progress Bar</label>
-<progress value="0" max="1000" id="progressBar"></progress>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="progress.css">
+</head>
 
-<form id="form">
-    <input type="number" id="progress" placeholder="Enter a number between 0 and 1000">
-    <input type="submit" value="Submit" onclick="updateProgress()">
-</form>
+<body>
+    <label>Progress Bar</label>
+    <progress value="0" max="1000" id="progressBar"></progress>
+    <br>
+    <form id="form">
+        <input type="number" id="progress" placeholder="Enter a number between 0 and 1000">
+        <input type="submit" value="Submit" onclick="updateProgress()">
+    </form>
+
+    <script src="progress.js"></script>
+</body>
+
+</html>
