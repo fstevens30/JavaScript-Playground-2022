@@ -5,20 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progress Bar</title>
+    <title>Slider Bar</title>
     <link rel="stylesheet" href="progress.css">
 </head>
 
 <body>
-    <label>Progress Bar</label>
-    <progress value="0" max="1000" id="progressBar"></progress>
-    <br>
-    <form id="form">
-        <input type="number" id="progress" min="0" max="1000" placeholder="Enter a number between 0 and 1000">
-    </form>
-    <br>
-    <button onclick="updateProgress()">Submit</button>
-
+    <label>Slider Bar</label>
+    <input type="range" min="0" max="1000" value="500" id="progress-bar">
     <script src="progress.js"></script>
 </body>
 

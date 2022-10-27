@@ -21,3 +21,19 @@ progress {
     overflow: hidden;
     box-shadow: inset 0 0.1em 0.1em rgba(0, 0, 0, 0.1);
 }
+
+progress::-webkit-progress-bar {
+    background-color: var(--progress-color);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--progress-color);
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--progress-color);
+}
+
+* {
+    --progress-color: none;
+}
