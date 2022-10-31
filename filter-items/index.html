@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Items</title>
+</head>
+
+<body>
+    <h1>Welcome to Filter Items</h1>
+    <h2>I wanted to create functionality to filter a list of items by price (low to high), price (high to low) and name.</h2>
+    <br>
+    <select>
+        <option onclick="filterPriceLowHigh()">Price (Low to High)</option>
+        <option onclick="filterPriceHighLow()">Price (High to Low)</option>
+        <option onclick="filterName()">Name (A - Z)</option>
+    </select>
+    <br>
+    <!-- Div displaying the items to be filtered -->
+    <div id="items">
+    </div>
+</body>
+
+</html>
