@@ -237,6 +237,8 @@ console.log(checkBrackets("1-(222-111-2222")); //Should return false
 
 */
 
+/*
+
 // ANCHOR Attempt at the above code.
 
 function telephoneCheck(str) {
@@ -298,3 +300,81 @@ console.log(telCheck("222)-111-2222")); //Should return false
 console.log(telCheck("1 555 555 5555")); //Should return true
 
 // This still doesnt pass all tests.
+
+*/
+
+//Trying again with different functions to validate the number
+
+// WORK IN PROGRESS
+
+/*
+function telephoneCheck(str) {
+
+    let str = str;
+
+    let lengthValidate = false;
+    let bracketValidate = false;
+    let numberValidate = false;
+
+    //Function for validating character count.
+    // Only allow numbers with 10 or 11 characters.
+
+    function validateCharCount(str) {
+        let clean = str.replace(/[^0-9]/g, ''); //Regex to keep only numbers.
+        if (clean.length === 10 || clean.length === 11) { //If the clean string is 10 or 11 characters long.
+            let lengthValidate = true; //Set the lengthValidate variable to true.
+        } else {
+            return false;
+        }
+    };
+
+    //Function for validating brackets.
+    //Only allow numbers with brackets if there is a matching bracket.
+
+    function validateBrackets(str) {
+        let brackets = str.replace(/[^0-9()]/g, ''); //Regex to keep only numbers and brackets.
+        if (brackets.includes("(") && brackets.includes(")")) { //If the brackets string includes "(" and ")".
+            let bracketValidate = true; //Set the bracketValidate variable to true.
+        } else if (!brackets.includes("(") && !brackets.includes(")")) { //If the brackets string does not include "(" and ")".
+            let bracketValidate = true; //Set the bracketValidate variable to true.
+        } else {
+            return false;
+        }
+    };
+
+    //Function for validating numbers.
+    //Only allow numbers with 1 as the first character if the number is 11 characters long.
+
+    function validateNumbers(str) {
+        let clean = str.replace(/[^0-9]/g, ''); //Regex to keep only numbers.
+        if (clean.length === 10) { //If the clean string is 10 characters long.
+            let numberValidate = true; //Set the numberValidate variable to true.
+        } else if (clean.length === 11 && clean[0] === "1") { //If the clean string is 11 characters long and the first character is 1.
+            let numberValidate = true; //Set the numberValidate variable to true.
+        } else {
+            return false;
+        }
+    };
+}
+*/
+
+// Using a regex to validate the number.
+
+function telephoneCheck(str) {
+    let regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+    return regex.test(str);
+}
+
+console.log(telephoneCheck("555-555-5555")); //Should return true
+
+console.log(telephoneCheck("1 555-555-5555")); //Should return true
+
+console.log(telephoneCheck("1 (555) 555-5555")); //Should return true
+
+console.log(telephoneCheck("5555555555")); //Should return true
+
+console.log(telephoneCheck("555-555-5555")); //Should return true
+
+console.log(telephoneCheck("(555)555-5555")); //Should return true
+
+console.log(telephoneCheck("1555)555-5555")); //Should return false
